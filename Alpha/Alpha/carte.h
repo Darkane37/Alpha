@@ -6,8 +6,12 @@ public:
 	carte();
 	~carte();
 
+	void initialiserCarte();
+
 private:
 
-	int const m_tailleX;
-	int const m_tailleY;
+	int m_tailleX;
+	int m_tailleY;
+
+	int **m_carte;
 };

@@ -4,9 +4,15 @@
 
 using namespace std;
 
-carte::carte()
+// Implémentation de la carte
+carte::carte() : m_tailleX(5), m_tailleY(5)
 {
-	int carte[m_tailleX][m_tailleY]; // Erreur ?
+	m_carte[m_tailleX][m_tailleY];
+}
+
+void carte::initialiserCarte()
+{
+	int i(0), j(0);
 }
 
 

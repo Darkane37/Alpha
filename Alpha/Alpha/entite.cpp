@@ -1,8 +1,11 @@
 #include "stdafx.h"
 #include "entite.h"
 
+// Implémentation du constructeur d'entité.
 entite::entite()
 {
+	m_vie = 100;
+	m_atk = 10;
 }
 
 void entite::recevoirDegats(int nombreDegats)
@@ -21,17 +24,10 @@ void entite::attaquer(entite &cible)
 }
 
 // Fonction permettant de vérifier que la cible est toujours vivante.
-bool entite::estVivant() {
-
-	if (m_vie > 0)
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
-
+// Amélioration de la fonction estVivant().
+bool entite::estVivant()
+{
+		return m_vie > 0;
 }
 
 entite::~entite()

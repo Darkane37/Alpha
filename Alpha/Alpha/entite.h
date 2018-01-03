@@ -10,7 +10,7 @@ public:
 	void attaquer(entite &cible);
 	bool estVivant();
 
-private:
+protected:
 
 	int m_vie;
 	int m_atk;

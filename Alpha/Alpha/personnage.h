@@ -3,7 +3,7 @@
 #include "entite.h"
 
 class personnage :
-	public entite
+	protected entite
 {
 public:
 	personnage();
