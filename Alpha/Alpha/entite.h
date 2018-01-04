@@ -6,8 +6,11 @@ public:
 	entite();
 	~entite();
 
-	void recevoirDegats(int nombreDegats);
 	void attaquer(entite &cible);
+
+	int getVie();
+	void setVie(int nouvelleVie);
+
 	bool estVivant();
 
 protected:

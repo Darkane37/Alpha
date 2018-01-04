@@ -8,26 +8,36 @@ entite::entite()
 	m_atk = 10;
 }
 
-void entite::recevoirDegats(int nombreDegats)
-{
-	m_vie -= nombreDegats;
-
-	if (m_vie < 0)
-	{
-		m_vie = 0; // Evite que la vie tombe en négatif.
-	}
-}
-
 void entite::attaquer(entite &cible)
 {
-	//cible.recevoirDegats(cible.getAtk());
+	int dommage(0);
+
+	dommage = cible.getVie() - m_atk;
+
+	cible.setVie(dommage);
+}
+
+int entite::getVie()
+{
+	return m_vie;
+}
+
+void entite::setVie(int nouvelleVie)
+{
+	m_vie = nouvelleVie;
 }
 
 // Fonction permettant de vérifier que la cible est toujours vivante.
-// Amélioration de la fonction estVivant().
 bool entite::estVivant()
 {
-		return m_vie > 0;
+	if (m_vie > 0)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }
 
 entite::~entite()
