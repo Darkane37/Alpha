@@ -13,5 +13,5 @@ private:
 	int m_tailleX;
 	int m_tailleY;
 
-	int **m_carte;
+	char **m_carte;
 };
