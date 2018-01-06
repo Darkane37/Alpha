@@ -1,24 +1,23 @@
 #include "stdafx.h"
 #include "carte.h"
 
-
 using namespace std;
 
 // Implémentation de la carte
-carte::carte() : m_tailleX(6), m_tailleY(5), m_carte(m_tailleX, vector<char>(m_tailleY, '_'))
+carte::carte() : m_colonne(6), m_ligne(7), m_carte(m_colonne, vector<char>(m_ligne, '_'))
 {
 
 }
 
-/* Fonctionne en mode console.
+/*
 void carte::afficherCarte() const
 {
-	for (int i = 0; i < m_tailleY; i++)
+	for (int i = 0; i < m_colonne; i++)
 	{
 		cout << '|';
-		for (int j = 0; j < m_tailleX; j++)
+		for (int j = 0; j < m_ligne; j++)
 		{
-			cout << m_carte.at(j).at(i);
+			cout << m_carte1.at(i).at(j);
 			cout << '|';
 		}
 		cout << endl;

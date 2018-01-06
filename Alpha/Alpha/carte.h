@@ -13,8 +13,8 @@ public:
 
 private:
 
-	int m_tailleX;
-	int m_tailleY;
+	int m_colonne;
+	int m_ligne;
 
 	std::vector<std::vector<char>> m_carte;
 };
